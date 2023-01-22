@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.2.0/modern-normalize.min.css"
@@ -34,13 +34,15 @@
           >
           <ul class="header-list list">
             <li class="header-item">
-              <a class="header-link link  current active" href="./index.html">Studio</a>
+              <a class="header-link link current active" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="header-item">
-              <a class="header-link link " href="./portfolio.html">Portfolio</a>
+              <a class="header-link link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="header-item">
-              <a class="header-link link " href="">Contacts</a>
+              <a class="header-link link" href="">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -62,7 +64,9 @@
       <section class="event">
         <div class="conteiner event-conteiner">
           <h1 class="event-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="event-btr" data-modal-open>Order Service</button>
+          <button type="button" class="event-btr" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="info">
@@ -427,18 +431,113 @@
           </ul>
         </div>
       </div>
+      <div class="conteiner">
+        <h3 class="footer-text-form">Subscribe</h3>
+        <form class="footer-form">
+          <label for="email" class="footer-label"></label>
+          <input
+            type="email"
+            class="footer-input"
+            name=""
+            id="email"
+            placeholder="email"
+          />
+          <button type="submit" class="footer-btn button">Subscribe</button>
+        </form>
+      </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="model-close" data-modal-close>
-                <svg class="model-icon" width="8" height="8">
-                  <use href="./images/icons.svg#icon-close"></use>
-                </svg></button>
+          <svg class="model-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">
+          Leave your contacts and we will call you back
+        </h2>
+        <form class="modal-form">
+          <div class="modal-failed">
+            <label for="name" class="modal-label">Name</label>
+            <div class="input-wrap">
+              <input
+                type="text"
+                class="modal-input"
+                name="name"
+                id="name"
+                placeholder=""
+              />
+              <svg class="input-icon" width="22" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-failed">
+            <label for="tel" class="modal-label">Fhone</label>
+            <div class="input-wrap">
+              <input
+                type="tel"
+                class="modal-input"
+                name="tel"
+                id="tel"
+                placeholder=""
+              />
+              <svg class="input-icon" width="22" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-failed">
+            <label for="mail" class="modal-label">Mail</label>
+            <div class="input-wrap">
+              <input
+                type="email"
+                class="modal-input"
+                name="mail"
+                id="mail"
+                placeholder=""
+              />
+              <svg class="input-icon" width="22" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-failed">
+            <label for="comment" class="modal-label">Comment</label>
+            <textarea
+              class="modal-comment"
+              name="comment"
+              id="comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="modal-failed">
+            <input
+              type="checkbox"
+              name="privaty"
+              id="privaty"
+              value="true"
+              class="input-check"
+            />
+            <label for="privaty" class="check-text"
+              >I accept the terms and conditions of the
+              <a href="">Privacy Policy</a>
+              <span>
+                <svg class="input-icon" width="22" height="24">
+                  <use href="./images/icons.svg#icon-Vector-check"></use>
+                </svg>
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="modal-btn button">Send</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-         AOS.init();
+      AOS.init();
     </script>
     <script src="./js/modal.js"></script>
   </body>
