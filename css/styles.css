@@ -342,13 +342,15 @@ body {
 
 }
 .team-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
   width: 100%;
   height: 100%;
   background-color: var(--logo-color);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
   transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-soc-icon{
@@ -451,6 +453,8 @@ body {
  
  
  
+ 
+ 
 }
 .footer-wrap{
   width: 264px;
@@ -542,30 +546,69 @@ body {
 }
 /* -------------footer-form-------------- */
 .footer-form {
- 
+  display: flex;
   width: 453px;
   height: 80px;
-  margin: 0; 
+ 
 }
 
 .footer-text-form{
+  margin-bottom: 16px;
+
+  font-family: inherit, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
   color: var(--fon-color);
+  
+   
+}
+.footer-sub{
+ margin-left: 80px;
 }
 .footer-label {
-}
-.footer-input {
-  width: 264px;
-  height: 40px;
+  
+  
   
 }
+.footer-input {
+  padding-left: 16px;
+  width: 264px;
+  height: 40px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--title-color);
+}
 .footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
   width: 165px;
   height: 40px;
-  background: #4D5AE5;
+  font-family: inherit, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: var(--team-color);
+  background-color: #4D5AE5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
+  margin-left: 24px;
+  
+  
+
 }
-.button {
+.sub-icon{
+  
+  fill: var(--fon-model);
+  margin-left: 16px;
 }
   
 /* -------------button-------------- */
@@ -709,14 +752,22 @@ body {
   background-color:var(--end-name);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden{
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.model-close:hover,
+.model-close:focus{
+  background-color: var(--btn-fon);
+
 }
 /* -------------modal-------------- */
 
@@ -735,6 +786,7 @@ body {
   
 }
 .modal-failed {
+
   
   
  
@@ -755,6 +807,7 @@ body {
   resize: none;
   padding-top: 8px;
   padding-left: 16px;
+  margin-bottom: 16px;
 }
 .modal-comment:focus{
   border-color: var(--btn-fon);
@@ -777,7 +830,7 @@ body {
   margin-bottom: 8px;
   padding-left: 40px;
   outline: none;
- 
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus{
   border-color: var(--logo-color);
@@ -787,21 +840,53 @@ body {
 }
 
 .modal-btn{
-
-width: 169px;
-height: 56px;
-background: #4D5AE5;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-}
-.check-text{
-  font-size: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  margin: 0 auto;
+    
+  width: 169px;
+  height: 56px;
+
+  color: var(--fon-color);
+  background-color:var(--logo-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
+.check-text{
+  display: flex;
+  align-items: center;
+  
+  font-size: 12px;
+ 
+  margin-bottom: 24px;
+  margin-left: 5px;
+}
+.check-text span{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+ 
+  width: 16px;
+  height: 16px;
+  border: 2px solid #2e2f42;
+  border-radius: 3px;
+  margin-right: 8px;
+  
+  fill: transparent;
+}
+.input-check:checked + .check-text span{
+ background-color: var(--logo-color);
+ border: none;
+ fill: var(--team-color);
+}
+.check-link{
+  margin-left: 5px;
 }
 
-
-.check-text::before{
+/* .check-text::before{
   content: "";
   width: 16px;
   height: 16px;
@@ -809,12 +894,12 @@ border-radius: 4px;
   border-radius: 3px;
   display: block;
   margin-right: 8px;
-}
-.input-check:checked + .check-text::before{
+} */
+/* .input-check:checked + .check-text::before{
   background-color: var(--logo-color);
   border: none;
   background-image: url(../images/Vector-check.svg);
   background-repeat: no-repeat;
   background-position: center;
 
-}
+} */
